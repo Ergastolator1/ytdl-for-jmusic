@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from .generic import GenericIE
 
 try:
     from .lazy_extractors import *
