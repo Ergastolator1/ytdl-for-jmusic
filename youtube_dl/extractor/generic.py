@@ -1495,31 +1495,6 @@ class GenericIE(InfoExtractor):
                 'upload_date': '20160409',
             },
         },
-        # LiveLeak embed
-        {
-            'url': 'http://www.wykop.pl/link/3088787/',
-            'md5': '7619da8c820e835bef21a1efa2a0fc71',
-            'info_dict': {
-                'id': '874_1459135191',
-                'ext': 'mp4',
-                'title': 'Man shows poor quality of new apartment building',
-                'description': 'The wall is like a sand pile.',
-                'uploader': 'Lake8737',
-            },
-            'add_ie': [LiveLeakIE.ie_key()],
-        },
-        # Another LiveLeak embed pattern (#13336)
-        {
-            'url': 'https://milo.yiannopoulos.net/2017/06/concealed-carry-robbery/',
-            'info_dict': {
-                'id': '2eb_1496309988',
-                'ext': 'mp4',
-                'title': 'Thief robs place where everyone was armed',
-                'description': 'md5:694d73ee79e535953cf2488562288eee',
-                'uploader': 'brazilwtf',
-            },
-            'add_ie': [LiveLeakIE.ie_key()],
-        },
         # Duplicated embedded video URLs
         {
             'url': 'http://www.hudl.com/athlete/2538180/highlights/149298443',
@@ -1644,99 +1619,6 @@ class GenericIE(InfoExtractor):
             'only_matching': True,
         },
         {
-            'url': 'https://support.arkena.com/display/PLAY/Ways+to+embed+your+video',
-            'md5': 'b96f2f71b359a8ecd05ce4e1daa72365',
-            'info_dict': {
-                'id': 'b41dda37-d8e7-4d3f-b1b5-9a9db578bdfe',
-                'ext': 'mp4',
-                'title': 'Big Buck Bunny',
-                'description': 'Royalty free test video',
-                'timestamp': 1432816365,
-                'upload_date': '20150528',
-                'is_live': False,
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [ArkenaIE.ie_key()],
-        },
-        {
-            'url': 'http://nova.bg/news/view/2016/08/16/156543/%D0%BD%D0%B0-%D0%BA%D0%BE%D1%81%D1%8A%D0%BC-%D0%BE%D1%82-%D0%B2%D0%B7%D1%80%D0%B8%D0%B2-%D0%BE%D1%82%D1%86%D0%B5%D0%BF%D0%B8%D1%85%D0%B0-%D1%86%D1%8F%D0%BB-%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB-%D0%B7%D0%B0%D1%80%D0%B0%D0%B4%D0%B8-%D0%B8%D0%B7%D1%82%D0%B8%D1%87%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%B3%D0%B0%D0%B7-%D0%B2-%D0%BF%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2/',
-            'info_dict': {
-                'id': '1c7141f46c',
-                'ext': 'mp4',
-                'title': 'НА КОСЪМ ОТ ВЗРИВ: Изтичане на газ на бензиностанция в Пловдив',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [Vbox7IE.ie_key()],
-        },
-        {
-            # DBTV embeds
-            'url': 'http://www.dagbladet.no/2016/02/23/nyheter/nordlys/ski/troms/ver/43254897/',
-            'info_dict': {
-                'id': '43254897',
-                'title': 'Etter ett års planlegging, klaffet endelig alt: - Jeg måtte ta en liten dans',
-            },
-            'playlist_mincount': 3,
-        },
-        {
-            # Videa embeds
-            'url': 'http://forum.dvdtalk.com/movie-talk/623756-deleted-magic-star-wars-ot-deleted-alt-scenes-docu-style.html',
-            'info_dict': {
-                'id': '623756-deleted-magic-star-wars-ot-deleted-alt-scenes-docu-style',
-                'title': 'Deleted Magic - Star Wars: OT Deleted / Alt. Scenes Docu. Style - DVD Talk Forum',
-            },
-            'playlist_mincount': 2,
-        },
-        {
-            # 20 minuten embed
-            'url': 'http://www.20min.ch/schweiz/news/story/So-kommen-Sie-bei-Eis-und-Schnee-sicher-an-27032552',
-            'info_dict': {
-                'id': '523629',
-                'ext': 'mp4',
-                'title': 'So kommen Sie bei Eis und Schnee sicher an',
-                'description': 'md5:117c212f64b25e3d95747e5276863f7d',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [TwentyMinutenIE.ie_key()],
-        },
-        {
-            # VideoPress embed
-            'url': 'https://en.support.wordpress.com/videopress/',
-            'info_dict': {
-                'id': 'OcobLTqC',
-                'ext': 'm4v',
-                'title': 'IMG_5786',
-                'timestamp': 1435711927,
-                'upload_date': '20150701',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [VideoPressIE.ie_key()],
-        },
-        {
-            # Rutube embed
-            'url': 'http://magazzino.friday.ru/videos/vipuski/kazan-2',
-            'info_dict': {
-                'id': '9b3d5bee0a8740bf70dfd29d3ea43541',
-                'ext': 'flv',
-                'title': 'Магаззино: Казань 2',
-                'description': 'md5:99bccdfac2269f0e8fdbc4bbc9db184a',
-                'uploader': 'Магаззино',
-                'upload_date': '20170228',
-                'uploader_id': '996642',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [RutubeIE.ie_key()],
-        },
-        {
             # ThePlatform embedded with whitespaces in URLs
             'url': 'http://www.golfchannel.com/topics/shows/golftalkcentral.htm',
             'only_matching': True,
@@ -1784,43 +1666,6 @@ class GenericIE(InfoExtractor):
                 'description': 'md5:3ccc48a60fc9441eeccfc9c469ebf788',
             },
             'playlist_mincount': 4,
-        },
-        {
-            # WashingtonPost embed
-            'url': 'http://www.vanityfair.com/hollywood/2017/04/donald-trump-tv-pitches',
-            'info_dict': {
-                'id': '8caf6e88-d0ec-11e5-90d3-34c2c42653ac',
-                'ext': 'mp4',
-                'title': "No one has seen the drama series based on Trump's life \u2014 until now",
-                'description': 'Donald Trump wanted a weekly TV drama based on his life. It never aired. But The Washington Post recently obtained a scene from the pilot script — and enlisted actors.',
-                'timestamp': 1455216756,
-                'uploader': 'The Washington Post',
-                'upload_date': '20160211',
-            },
-            'add_ie': [WashingtonPostIE.ie_key()],
-        },
-        {
-            # Mediaset embed
-            'url': 'http://www.tgcom24.mediaset.it/politica/serracchiani-voglio-vivere-in-una-societa-aperta-reazioni-sproporzionate-_3071354-201702a.shtml',
-            'info_dict': {
-                'id': '720642',
-                'ext': 'mp4',
-                'title': 'Serracchiani: "Voglio vivere in una società aperta, con tutela del patto di fiducia"',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [MediasetIE.ie_key()],
-        },
-        {
-            # JOJ.sk embeds
-            'url': 'https://www.noviny.sk/slovensko/238543-slovenskom-sa-prehnala-vlna-silnych-burok',
-            'info_dict': {
-                'id': '238543-slovenskom-sa-prehnala-vlna-silnych-burok',
-                'title': 'Slovenskom sa prehnala vlna silných búrok',
-            },
-            'playlist_mincount': 5,
-            'add_ie': [JojIE.ie_key()],
         },
         {
             # AMP embed (see https://www.ampproject.org/docs/reference/components/amp-video)
@@ -1874,62 +1719,6 @@ class GenericIE(InfoExtractor):
             }
         },
         {
-            'url': 'http://www.kidzworld.com/article/30935-trolls-the-beat-goes-on-interview-skylar-astin-and-amanda-leighton',
-            'info_dict': {
-                'id': '1731611',
-                'ext': 'mp4',
-                'title': 'Official Trailer | TROLLS: THE BEAT GOES ON!',
-                'description': 'md5:eb5f23826a027ba95277d105f248b825',
-                'timestamp': 1516100691,
-                'upload_date': '20180116',
-            },
-            'params': {
-                'skip_download': True,
-            },
-            'add_ie': [SpringboardPlatformIE.ie_key()],
-        },
-        {
-            'url': 'https://www.youtube.com/shared?ci=1nEzmT-M4fU',
-            'info_dict': {
-                'id': 'uPDB5I9wfp8',
-                'ext': 'webm',
-                'title': 'Pocoyo: 90 minutos de episódios completos Português para crianças - PARTE 3',
-                'description': 'md5:d9e4d9346a2dfff4c7dc4c8cec0f546d',
-                'upload_date': '20160219',
-                'uploader': 'Pocoyo - Português (BR)',
-                'uploader_id': 'PocoyoBrazil',
-            },
-            'add_ie': [YoutubeIE.ie_key()],
-            'params': {
-                'skip_download': True,
-            },
-        },
-        {
-            'url': 'https://www.yapfiles.ru/show/1872528/690b05d3054d2dbe1e69523aa21bb3b1.mp4.html',
-            'info_dict': {
-                'id': 'vMDE4NzI1Mjgt690b',
-                'ext': 'mp4',
-                'title': 'Котята',
-            },
-            'add_ie': [YapFilesIE.ie_key()],
-            'params': {
-                'skip_download': True,
-            },
-        },
-        {
-            # CloudflareStream embed
-            'url': 'https://www.cloudflare.com/products/cloudflare-stream/',
-            'info_dict': {
-                'id': '31c9291ab41fac05471db4e73aa11717',
-                'ext': 'mp4',
-                'title': '31c9291ab41fac05471db4e73aa11717',
-            },
-            'add_ie': [CloudflareStreamIE.ie_key()],
-            'params': {
-                'skip_download': True,
-            },
-        },
-        {
             # PeerTube embed
             'url': 'https://joinpeertube.org/fr/home/',
             'info_dict': {
@@ -1937,24 +1726,6 @@ class GenericIE(InfoExtractor):
                 'title': 'Reprenez le contrôle de vos vidéos ! #JoinPeertube',
             },
             'playlist_count': 2,
-        },
-        {
-            # Indavideo embed
-            'url': 'https://streetkitchen.hu/receptek/igy_kell_otthon_hamburgert_sutni/',
-            'info_dict': {
-                'id': '1693903',
-                'ext': 'mp4',
-                'title': 'Így kell otthon hamburgert sütni',
-                'description': 'md5:f5a730ecf900a5c852e1e00540bbb0f7',
-                'timestamp': 1426330212,
-                'upload_date': '20150314',
-                'uploader': 'StreetKitchen',
-                'uploader_id': '546363',
-            },
-            'add_ie': [IndavideoEmbedIE.ie_key()],
-            'params': {
-                'skip_download': True,
-            },
         },
         {
             # APA embed via JWPlatform embed
@@ -2004,23 +1775,6 @@ class GenericIE(InfoExtractor):
                 'uploader': 'Helen & Douglas House',
                 'upload_date': '20140328',
             },
-            'params': {
-                'skip_download': True,
-            },
-        },
-        {
-            # Zype embed
-            'url': 'https://www.cookscountry.com/episode/554-smoky-barbecue-favorites',
-            'info_dict': {
-                'id': '5b400b834b32992a310622b9',
-                'ext': 'mp4',
-                'title': 'Smoky Barbecue Favorites',
-                'thumbnail': r're:^https?://.*\.jpe?g',
-                'description': 'md5:5ff01e76316bd8d46508af26dc86023b',
-                'upload_date': '20170909',
-                'timestamp': 1504915200,
-            },
-            'add_ie': [ZypeIE.ie_key()],
             'params': {
                 'skip_download': True,
             },
@@ -2421,8 +2175,6 @@ class GenericIE(InfoExtractor):
                 if isinstance(src_type, compat_str):
                     src_type = src_type.lower()
                 ext = determine_ext(src).lower()
-                if src_type == 'video/youtube':
-                    return self.url_result(src, YoutubeIE.ie_key())
                 if src_type == 'application/dash+xml' or ext == 'mpd':
                     formats.extend(self._extract_mpd_formats(
                         src, video_id, mpd_id='dash', fatal=False))
@@ -2448,8 +2200,6 @@ class GenericIE(InfoExtractor):
             return merge_dicts(json_ld, info_dict)
 
         def check_video(vurl):
-            if YoutubeIE.suitable(vurl):
-                return True
             if RtmpIE.suitable(vurl):
                 return True
             vpath = compat_urlparse.urlparse(vurl).path
@@ -2546,11 +2296,6 @@ class GenericIE(InfoExtractor):
             video_url = video_url.replace('\\/', '/')
             video_url = compat_urlparse.urljoin(url, video_url)
             video_id = compat_urllib_parse_unquote(os.path.basename(video_url))
-
-            # Sometimes, jwplayer extraction will result in a YouTube URL
-            if YoutubeIE.suitable(video_url):
-                entries.append(self.url_result(video_url, 'Youtube'))
-                continue
 
             # here's a fun little line of code for you:
             video_id = os.path.splitext(video_id)[0]
