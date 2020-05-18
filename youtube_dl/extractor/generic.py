@@ -34,6 +34,7 @@ from ..utils import (
     xpath_text,
 )
 from .commonprotocols import RtmpIE
+from .jwplatform import JWPlatformIE
 
 
 class GenericIE(InfoExtractor):
